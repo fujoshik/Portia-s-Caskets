@@ -1,0 +1,188 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@WEIGHT_OR_RANGE&display=swap'); */
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4e2c8;
+  }
+
+  h1, p {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 6rem;
+  }
+
+  .chest-container {
+    flex: 1;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 2rem;
+  }
+
+  .text-container {
+    height: 6rem;
+    flex-grow: 1;
+  }
+
+  #gold {
+    --gold: #feb21f;
+    --beige: #f4e2c8;
+    --black: #101010;
+    --blackLight: #cbc760;
+    --blackAlpha: rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(
+      var(--blackLight) 0%,
+      var(--blackLight) 30%,
+      var(--gold) 30%,
+      var(--gold) 40%,
+      var(--blackLight) 40%,
+      var(--blackLight) 100%
+    );
+  }
+
+  #silver {
+    --gold: #feb21f;
+    --beige: #f4e2c8;
+    --black: #101010;
+    --blackLight: #aeaeae;
+    --blackAlpha: rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(
+      var(--blackLight) 0%,
+      var(--blackLight) 30%,
+      var(--gold) 30%,
+      var(--gold) 40%,
+      var(--blackLight) 40%,
+      var(--blackLight) 100%
+    );
+  }
+
+  #iron {
+    --gold: #feb21f;
+    --beige: #f4e2c8;
+    --black: #101010;
+    --blackLight: #707696;
+    --blackAlpha: rgba(0, 0, 0, 0.2);
+
+    background: linear-gradient(
+      var(--blackLight) 0%,
+      var(--blackLight) 30%,
+      var(--gold) 30%,
+      var(--gold) 40%,
+      var(--blackLight) 40%,
+      var(--blackLight) 100%
+    );
+  }
+  
+  .chest {
+    margin: 0 20px;
+    flex-grow: 2;
+    position: relative;
+    height: 10rem;
+    cursor: pointer;
+    border: solid var(--gold);
+    border-width: 0 1rem;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0.25rem 0.25rem var(--blackAlpha);
+  }
+  /*shadow*/
+  .chest::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    bottom: 0;
+    left: 50%;
+    border-radius: 0 0.25rem 0.25rem 0;
+    background-color: var(--blackAlpha);
+  }
+  .chest_keyholeBG {
+    position: absolute;
+    top: 40%;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gold);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  }
+  .chest_keyhole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .chest_keyhole::before {
+    content: "";
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--black);
+  }
+  .chest_keyhole::after {
+    content: "";
+    display: block;
+    width: 0.25rem;
+    height: 0.75rem;
+    margin-top: -0.25rem;
+    background-color: var(--black);
+  }
+
+  .popup {
+    background: #fff;
+    padding: 0 30px 30px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .popup p {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 0;
+  }
+
+  .popup img {
+    margin-top: 50px;
+  }
+
+  .popup .closeBtn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px 0;
+    background: rgb(42, 185, 42);
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+  }
